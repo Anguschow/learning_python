@@ -1,0 +1,392 @@
+theme: jekyll-theme-cayman# Day2 Coding history  for 《python从入门到实践》 第3.4章节 随书练习和课后练习。
+
+# magicians = ['Davic', 'Mike', 'Angus']
+# for magician in magicians:
+#     print(magician.title() + ", what a grate show!")
+#     print("We can't wait to see you again !" + magician.title() + "!\n")
+# print("Thank you for all comming!")
+
+# for value in range(1,10):
+#     print(value)
+# 只会显示1-9，不会显示10出来。如果是range(10)，那么出来的结果是0-9.
+# # 列表  创建数值列表
+# members=list(range(1,6))
+# print(members)
+# members1=list(range(1,10,2))
+# print(members1)
+
+# 求数值列表每个数值的平方
+
+# square=[] # 设置一个空的列表
+# for i in range(1,10):  # 取一个从1-10的列表，然后循环取值
+#     j = i ** 2         # 设置变量j ,每一次循环j都等于取到的i值的平方
+#     square.append(j)   # 追加j的值进入 square 列表中
+#
+# print(square)
+#
+# values=[]
+# for i in range(1,1000001):
+#     value=i
+#     values.append(value)
+# print(values)
+#
+# values = [value for value in range(1,1000001)]  # 等于上面的列表产生过程
+#
+# print(min(values))
+#
+# print(max(values))
+#
+# print(sum(values))
+
+# values = list(range(1,1000001))  # 快速生成数列
+#
+# values1 = list ( range (2, 21,2))  # 得到2到20的偶数
+# print(values1)
+#
+# values2 = list (range (1,21,2))
+# print(values2)
+# for value in values2:
+#     print(value)                 # 《python从入门到实践》 课后习题  38页
+
+# values = list(range(1, 11))      # 《python从入门到实践》 课后习题  38页
+# for value in values:
+#     print(value **3)
+
+# values = [value **2 for value in range (1, 11)]    # 《python从入门到实践》 课后习题  38页
+# # print(values)
+#
+# players = ['charles', 'martina', 'michael', 'florence','eli']
+# # for player in players[0:3]:
+# #     print(player)
+#
+# qiuyuan = players[:]    # 在此注意有“[:]”和没有的区别， 有的话表示新建一个内存区间给qiuyuan，如果直接等于，那么相当于一个内存区间指向两个不同名字（风筝）
+# print(players)
+# print(qiuyuan)
+#
+# qiuyuan.append('angus')
+# players.append('bobe')
+#
+# print(players)
+# print(qiuyuan)
+#
+#
+#
+# players = ['charles', 'martina', 'michael', 'florence','eli']
+# print(players[0:2])          # 切片  结果是列表
+# for player in players[:2]:   # 遍历切片   结果是两行打印出的字符串
+#     print(player)
+#
+#
+# players = ['charles', 'martina', 'michael', 'florence','eli']   # 修改列表（末尾添加）、删除列表、pop列表最后一个值、添加一个值到列表
+# players[0]="charlie"   # 修改列表，数字代表索引
+# print(players)
+# players.append('nobody')  # 列表末尾添加某个值
+# print(players)
+# del players[0]         # 删除列表中某个值 有点类似for语句，称之为删除语句
+# print(players)
+# players.pop()          # 列表最后一个值被弹出，括号里不用填什么，这个值还在内存，可用
+# print(players)
+# popedplayer = players.pop()   # 如何使用弹出的值
+# print(players)
+# print(popedplayer)
+
+# 元组 元组相当于不可变的列表 用圆括号框起来
+#
+# dementions= (200, 50)
+# print(dementions[0])
+#
+# for demention in dementions:   # 遍历元组中的值
+#     print(demention)
+#
+# dementions=(400, 100)    # 元组中的值不能被修改，但是能被重新赋值
+# print(dementions)
+#
+# # 课后习题 43页
+# foods = ('rice', 'beef', 'pork', 'veg')  # 创建一个元组，注意字符串需要引号
+# for food in foods:
+#     print(food)
+# print(foods)
+# foods = ('rice', 'beef', 'pork', 'veg', 'lobster')
+# print(foods)
+# for food in foods:
+#     print(food)
+#
+
+# 《python从入门到实践》 第5-章节 随书练习和课后练习
+#
+# cars = ('audi', 'bmw', 'sabaru', 'toyota')
+# for car in cars:
+#     if car == 'bmw':         # if 语句的值如果为TRUE，则运行紧接着的语句，如果为FALSE则不运行“后面紧接着的”，判断相等是“==”，不等于是“!=”
+#         print(car.upper())
+#     else:
+#         print(car.title())
+#
+
+# AND 和 OR 关键字
+#
+# banded_users = ('colin', 'trump', 'mike', 'stephen')        # 用not in 做判断， 如果不在里面，则
+# user = 'angus'
+# if user not in banded_users :
+#     print("U can still uss the system!")
+#
+# banded_users = ('colin', 'trump', 'mike', 'stephen')
+# user = 'mike'
+# if user in banded_users:
+#     print("Get out!")
+#
+# # 检查多个条件， 用and 、or  与或非
+# age1 = 18
+# age2 = 32
+# print(age1 > 19 and age2 < 40)  # and 等于与， A与B都成立时返回TRUE,此处返回FALS
+# print(age1 >17 and age2 < 40)    #  此处返回TRUE
+# print(age1 >21 or age2 > 21)    # or等于或, A或B 其中一个成立就可以了，此处返回TRUE
+# print(age1 > 21 or age2 >40)   # FALS
+#
+# #  布尔值TRUE和FALSE
+#
+# car = 'subaru'
+# print("Is car == 'subaru'? I think is true.")
+# print(car == 'subaru')    # 里面的等式返回的值为TRUE
+#
+# print ("\nIs car == 'audi'? I dont think so.")
+# print (car == 'audi')    # 里面的等式返回的值为FALSE
+#
+# # 更多条件测试
+# a = 'lessbin'   # 字符串
+# b = 'homo'
+# print(a == b)
+# a = 'homo'      # lower()函数
+# b = 'Homo'
+# print(a == b.lower())
+
+# 测试特定的值是否包含在列表中
+# message=list(range (1,20))
+# print(message)
+# num = [2, 4, 30]
+# for i in num:     # 判断测试的值是否在其中
+#     if i in message:
+#         print("this is true that " + str(i) + " is in the series")  # 此处犯错的内容：参数i的内容是int，print输出中用+号连接的只能是str类型。
+# else:
+#     print("No," + str(i) + " is not in the series")
+#
+# for j in num:     # 判断测试的值是否未包含在其中
+#     if j not in message:
+#         print("No," + str(j) + " is not in the series")
+#     else:
+#         print("this is true that " + str(j) + " is in the series")
+#
+# 简单的if语句
+# age = 18
+# if age > 17:
+#     print("U can VOTE")
+#
+# # IF-ELSE 语句
+# age = 17
+# if age >= 18:
+#     print("U can VOTE!")
+#     print("Plese sign up!")
+# else:
+#     print("No, U can not VOTE!")
+#     print("Please go home !")
+#
+
+# IF-ELIF-...-ELSE
+# 4岁以下免费；
+# # 4~18岁收费5美元；
+# # 18岁（含）以上收费10美元。
+
+# age = 19
+# if age < 4:
+#     print("U can play it for free!")
+# elif age < 18:
+#     print("Charge for 5 Ds")
+# else:
+#     print("Charge for 10 Ds")
+#
+# # 优化版如下
+# age = 19
+# if age < 4:
+#     price = 0
+# elif age < 18:
+#     price = 5
+# else:
+#     price = 10
+# print("It might cost you $" + str(price) + ".")
+
+###### if-elif-else 结构功能强大，但仅适合用于只有一个条件满足的情况。
+###### if-elif-else 机构表示有一个条件通过后，就会跳过余下的条件，
+###### 如果是存在需要判断多个条件为TRUE的情况下，使用IF就行了。
+
+# fruit = ['apple', 'orange', 'grape', 'watermelon']
+# if 'apple' in fruit:                         # 成功，返回TRUE，
+#     print("preparing apple juice!")
+# if 'watermelon' in fruit:                    # 成功，返回TRUE，
+#     print("preparing watermelon juice!")
+# if 'banana' in fruit:                        # 失败，返回FALSE
+#     print("preparing banana juice!")
+# print("There you go! Your fruit juice!")
+#
+
+#  课后习题  49页
+
+# 假设在游戏中刚射杀了一个外星人，请创建一个名为alien_color 的变量，并将其设置为'green' 、'yellow' 或'red' 。
+# 编写一条if 语句，检查外星人是否是绿色的；如果是，就打印一条消息，指出玩家获得了5个点。
+# 编写这个程序的两个版本，在一个版本中上述测试通过了，而在另一个版本中未通过（未通过测试时没有输出）。
+
+alien_color = ['green', 'yellow', 'red', 'purple', 'green']
+for dead_body in alien_color:
+    if dead_body == 'green':
+        print ("You can get score of 5!")
+    else:
+        print("Game over")
+
+# ：像练习5-3那样设置外星人的颜色，并编写一个if-else 结构。
+# # 如果外星人是绿色的，就打印一条消息，指出玩家因射杀该外星人获得了5个点。
+# # 如果外星人不是绿色的，就打印一条消息，指出玩家获得了10个点。
+# # 编写这个程序的两个版本，在一个版本中执行if 代码块，而在另一个版本中执行else 代码块。
+# 版本1：
+alien_color = 'red'
+if alien_color == 'green':
+    print("congrats! u scored 5 points!")
+if alien_color != 'green':
+    print("congrats! u scored 10 points!")
+# 版本2：
+alien_color= 'red'
+if alien_color == 'green':
+    print("congrats! u scored 5 points!")
+else:
+    print("congrats! u scored 10 points!")
+
+# ：将练习5-4中的if-else 结构改为if-elif-else 结构。
+# 如果外星人是绿色的，就打印一条消息，指出玩家获得了5个点。
+# 如果外星人是黄色的，就打印一条消息，指出玩家获得了10个点。
+# 如果外星人是红色的，就打印一条消息，指出玩家获得了15个点。
+# 编写这个程序的三个版本，它们分别在外星人为绿色、黄色和红色时打印一条消息。
+
+alien_color = 'red'
+if alien_color == 'green':
+    print("congrats! u scored 5 points!")
+elif alien_color == 'yellow':
+    print("congrats! u scored 10 points!")
+else:
+    print("congrats! u scored 15 points!")
+
+# 设置变量age 的值，再编写一个if-elif-else 结构，根据age 的值判断处于人生的哪个阶段。
+# 如果一个人的年龄小于2岁，就打印一条消息，指出他是婴儿。
+# 如果一个人的年龄为2（含）～4岁，就打印一条消息，指出他正蹒跚学步。
+# 如果一个人的年龄为4（含）～13岁，就打印一条消息，指出他是儿童。
+# 如果一个人的年龄为13（含）～20岁，就打印一条消息，指出他是青少年。
+# 如果一个人的年龄为20（含）～65岁，就打印一条消息，指出他是成年人。
+# 如果一个人的年龄超过65（含）岁，就打印一条消息，指出他是老年人。
+
+age = 28
+if age < 2:
+    print("u are a baby")
+elif age < 4:
+    print("U are leaning how to walk")
+elif age <13:
+    print("you are a child")
+elif age < 20:
+    print("you are a youth")
+elif age < 65:
+    print("you are a grown-up")
+else:
+    print("you are an old geek")
+
+# 创建一个列表，其中包含你喜欢的水果，再编写一系列独立的if 语句，检查列表中是否包含特定的水果。
+# 将该列表命名为favorite_fruits ，并在其中包含三种水果。
+# 编写5条if 语句，每条都检查某种水果是否包含在列表中，如果包含在列表中，就打印一条消息，如“You really like bananas!”。
+
+favorite_fruits = ['banana', 'apple', 'grape']
+if 'banana' in favorite_fruits:
+    print("You really like banana")
+if 'orange' in favorite_fruits:
+    print("You rally like orange!")
+if 'apple' in favorite_fruits:
+    print("You really like apple!")
+if 'grape' in favorite_fruits:
+    print("You really like grape!")
+if 'sugar' in favorite_fruits:
+    print("You really like sugar!")
+
+# 检查特殊元素
+requested_toppings = ['mushrooms', 'green peppers', 'extra cheese']
+for requested_topping in requested_toppings:
+    print("Adding " + requested_topping + ".")
+print("\nFinished making your pizza!")
+
+# 如果青椒用完了咋办，要弄个提示出来
+requested_toppings = ['mushrooms', 'green peppers', 'extra cheese']
+for requested_topping in requested_toppings:
+    if requested_topping == 'green peppers':
+        print("sorry, we are run out ouf green pepper!")
+    else:
+        print("Adding" + requested_topping + ".")
+
+
+# 创建一个至少包含5个用户名的列表，且其中一个用户名为'admin' 。想象你要编写代码，在每位用户登录网站后都打印一条问
+# 候消息。遍历用户名列表，并向每位用户打印一条问候消息。
+# 如果用户名为'admin' ，就打印一条特殊的问候消息，如“Hello admin, would you like to see a status report?”。
+# 否则，打印一条普通的问候消息，如“Hello Eric, thank you for logging in again”。
+
+users = ['admin', 'sa', 'tiger', 'john', 'smith']
+for user in users:
+    if user == 'admin':
+        print("Hello admin, would you like to see a status report?")
+    else:
+        print("Hello " + user.title() + ", thank you for logging in again")
+
+# 在为完成练习5-8编写的程序中，添加一条if 语句，检查用户名列表是否为空。
+# 如果为空，就打印消息“We need to find some users!”。
+# 删除列表中的所有用户名，确定将打印正确的消息。
+users = []
+if user in users:  #在if 语句中将列表名用在条件表达式中时，Python将在列表至少包含一个元素时返回True ，并在列表为空时返回False 。
+    for user in users:
+        if user == 'admin':
+            print("Hello admin, would you like to see a status report?")
+        else:
+            print("Hello " + user.title() + ", thank you for logging in again")
+else:
+    print("we need some users")
+
+# 在这里，我们首先创建了一个空列表，其中不包含任何用户名，在首先处我们进行了简单检查，而不是直接执行for 循环。在if 语句中将列表名用在条件表达式中
+# 时，Python将在列表至少包含一个元素时返回True ，并在列表为空时返回False 。如果users不为空，就运行与前一个示例相同的for 循环；否则，就打印
+# 一条消息，询问顾客是否确实要加点用户
+
+
+# 按下面的说明编写一个程序，模拟网站确保每位用户的用户名都独一无二的方式。
+# 创建一个至少包含5个用户名的列表，并将其命名为current_users 。
+# 再创建一个包含5个用户名的列表，将其命名为new_users ，并确保其中有一两个用户名也包含在列表current_users 中。
+# 遍历列表new_users ，对于其中的每个用户名，都检查它是否已被使用。如果是这样，就打印一条消息，指出需要输入别的用户名；否则，打印一条消息，指
+# 出这个用户名未被使用。
+# 确保比较时不区分大消息；换句话说，如果用户名'John' 已被使用，应拒绝用户名'JOHN' 。
+current_users = ['admin', 'sa', 'tiger', 'john', 'smith']
+new_users = ['flower', 'mike', 'mia', 'john', 'cruz']
+for user in new_users:
+    if user.lower() in current_users:
+        print(user.title() + ",This name has been signed!")
+    else:
+        print(user.title() + ",This name has not been signed!")
+
+# 序数表示位置，如1st和2nd。大多数序数都以th结尾，只有1、2和3例外。
+# 在一个列表中存储数字1~9。
+# 遍历这个列表。
+# 在循环中使用一个if-elif-else 结构，以打印每个数字对应的序数。输出内容应为1st 、2nd 、3rd 、4th 、5th 、6th 、7th 、8th 和9th ，但每个序
+# 数都独占一行。
+
+numbers = list(range(1, 10))
+for number in numbers:
+    if number == 1:
+        print("1st")
+    elif number == 2:
+        print("2nd")
+    else:
+        print(str(number) + "th")
+
+# 此章节完
+
+
+
+
+
+
